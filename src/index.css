@@ -1,13 +1,108 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --DarkBlue__Dark-Mode-Elements: hsl(209, 23%, 22%);
+  --VeryDarkBlue__Dark-Mode-Background: hsl(207, 26%, 17%);
+  --VeryDarkBlue__Light-Mode-Text: hsl(200, 15%, 8%);
+  --DarkGray__Light-Mode-Input: hsl(0, 0%, 52%);
+  --VeryLightGray__Light-Mode-Background: hsl(0, 0%, 98%);
+  --White__Dark-Mode-Text-Light-Mode-Elements: hsl(0, 0%, 100%);
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  border: none;
+  opacity: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+body {
+  background-color: var(--VeryLightGray__Light-Mode-Background);
+  font-size: 16px;
+}
+
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 2.5em;
+  padding: 1.8em 0.75em;
+}
+
+.actions-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 0 1.5em;
+}
+
+.countries-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.dark-mode {
+  background-color: var(--VeryDarkBlue__Dark-Mode-Background);
+}
+
+.dark-mode h1,
+.dark-mode p,
+.dark-mode span,
+.dark-mode strong {
+  color: var(--White__Dark-Mode-Text-Light-Mode-Elements);
+} 
+
+.darkmodeElement {
+  background-color: var(--DarkBlue__Dark-Mode-Elements);
+}
+
+
+.darkmodeElement h1,
+.darkmodeElement button,
+.darkmodeElement input,
+.darkmodeElement input::placeholder {
+  color: var(--White__Dark-Mode-Text-Light-Mode-Elements);
+}
+
+
+@media only screen and (min-width: 777px) {
+  .actions-section {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  main {
+    padding: 1.8em 1.75em;
+  }
+
+  .actions-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

@@ -1,0 +1,10 @@
+.list-item {
+  border-bottom: 1px solid hsla(0, 0%, 52%, 0.519);
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.list-item:hover {
+  color: rgb(57, 57, 247);
+  font-weight: 600;
+}
